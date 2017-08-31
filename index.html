@@ -55,11 +55,11 @@
             var planets = ["Mercury", "venus", "Earth"];
 
             // Function to get data and Display from giphy
-            function displayPlanetInfo() {
+            function displayPlanetInfo() { 
                 // give planets name attribute what the user inter
                 var planet = $(this).attr("data-planet");
 
-                var queryURL = "https://api.giphy.com/v1/gifs/search?q=planet " + planet + "&api_key=96d0c82ba84e4782a58e7ee06b264325&limit=10";
+                var queryURL = "https://api.giphy.com/v1/gifs/search?q=planet " + planet + "&api_key=96d0c82ba84e4782a58e7ee06b264325&limit=5";
 
 
                 $.ajax({
@@ -103,6 +103,7 @@
                         // Appending the paragraph and image tag to the planetDiv
                         planetDiv.append(p);
                         planetDiv.append(planetImage);
+                
 
                         // Prependng the planetDiv to the HTML page in the "#planet" div
                         $("#planet").prepend(planetDiv);
